@@ -1,0 +1,7 @@
+Build.PL
+Changes
+Makefile.PL
+MANIFEST
+META.yml
+lib/Graphics/ColorNames/VACCC.pm
+t/01-VACCC.t

@@ -37,6 +37,12 @@ Afterwards I had lost the original E-mail.
 
 This version of the module was implemented separately.
 
+=head1 LICENSE
+
+Copyright (c) 2004 Robert Rothenberg. All rights reserved.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
 =cut
 
 require 5.006;
@@ -44,18 +50,18 @@ require 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 my %RgbColors   = ( );
-my $Initialized = 0;
 
 sub NamesRgbTable() {
   use integer;
-  unless ($Initialized) {
+  unless (keys %RgbColors) {
     while (my $line = <DATA>) {
       chomp($line);
       if ($line) {
-	my $rgb   = eval ("0x" . substr($line, 0, 6));
+	my $rgb   = eval "0x" . substr($line, 0, 6);
+#	die, unless ($rgb =~ /^\d+$/);
 	my $short = lc(substr($line, 8, 3)); $short =~ s/\s+$//;
 	my $long  = lc(substr($line, 11));   $long  =~ s/^\s+//;
 	$RgbColors{$short} = $rgb;
@@ -66,7 +72,6 @@ sub NamesRgbTable() {
 	$RgbColors{$long}  = $rgb;
       }
     }
-    $Initialized = 1;
   }
   return \%RgbColors;
 }

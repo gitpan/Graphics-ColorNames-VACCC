@@ -5,7 +5,7 @@ WriteMakefile
           'NAME' => 'Graphics::ColorNames::VACCC',
           'VERSION_FROM' => 'lib/Graphics/ColorNames/VACCC.pm',
           'PREREQ_PM' => {
-                           'Graphics::ColorNames' => '0.32',
+                           'Graphics::ColorNames' => '1.01',
                            'Test' => '0'
                          },
           'INSTALLDIRS' => 'site',

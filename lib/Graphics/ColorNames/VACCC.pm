@@ -9,7 +9,7 @@ Graphics::ColorNames::VACCC - VisiBone Anglo-Centric Color Codes for Graphics::C
   require Graphics::ColorNames::VACCC;
 
   $NameTable = Graphics::ColorNames::VACCC->NamesRgbTable();
-  $RgbBlack  = $NameTable->{paledullred};
+  $RgbColor  = $NameTable->{paledullred};
 
 =head1 DESCRIPTION
 
@@ -50,7 +50,7 @@ require 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 my %RgbColors   = ( );
 

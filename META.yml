@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Graphics-ColorNames-VACCC
-version: 1.01
+version: 1.02
 author:
   - Robert Rothenberg <rrwo at cpan.org>
 abstract: |-
@@ -14,5 +14,5 @@ build_requires:
 provides:
   Graphics::ColorNames::VACCC:
     file: lib/Graphics/ColorNames/VACCC.pm
-    version: 1.01
+    version: 1.02
 generated_by: Module::Build version 0.25_02
